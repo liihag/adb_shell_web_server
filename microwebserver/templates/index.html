@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<link rel="stylesheet" href="css/uikit.min.css"></link>
+<link rel="stylesheet" href="css/progress.min.css"></link>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/uikit.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+   
+<title>advertisement</title>
+</head>
+<body onload="return BED();">
+
+        <h1>index</h1>
+    <!--
+    <div class="uk-cover">
+        <video class="uk-cover-object" width="640" height="360" controls="" muted="" loop="" autoplay="">
+            <source type="video/mp4" src="http://www.quirksmode.org/html5/videos/big_buck_bunny.mp4?test1"></source>
+            <source type="video/ogg" src="moive/big_buck_bunny"></source>
+        </video>
+    </div>
+    -->
+    <p id="hint">hint</p>
+<div>
+    <p>开启应用</p>
+    <input type="text" id="startdata">
+    <input type="button" value="startapp" onclick="return startapp();" />
+    <span id="errorinfo"></span>
+</div>
+
+<div>
+    <p>文件上传</p>
+    <form method="post" enctype="multipart/form-data">
+        <input name="upload_file" type="file" />
+        <input type="submit" value="upload" />
+    </form>
+</div>
+
+
+
+</body>
+</html>

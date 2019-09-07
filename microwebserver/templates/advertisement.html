@@ -1,0 +1,51 @@
+
+<html>
+<head>
+
+<link rel="stylesheet" href="css/uikit.min.css"></link>
+<link rel="stylesheet" href="css/progress.min.css"></link>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/uikit.min.js"></script>
+
+<script type="text/javascript">
+function settimejump(secs,url)
+{
+    var lefttime = document.getElementById("lefttime");
+    lefttime.innerHTML = secs;
+    document.getElementById("progress").style.width= ((7-secs)*100/7) + '%';
+    if(secs-- > 0)
+    {
+        setTimeout("settimejump("+secs+",'"+url+"')",1000); 
+    }
+    else
+    {
+        document.getElementById("progress").style.width= '100%';
+        location.href = url;
+    }
+}
+    
+</script>
+<title>advertisement</title>
+</head>
+<body>
+<div style="text-align:center">
+    <br/> <br/> <br/> <br/> <br/>
+    <h1><p><b>带你走进智能生活</b></p></h1>
+    <br/> <br/>
+    <h2><p><a href="index">点击进入</a></p></h2>
+    <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
+    <div>
+        <h3><b id="lefttime">7</b>s into index</h3>
+    </div>
+    
+    <div class="uk-grid">
+        <div id="success" class="uk-width-medium-3-5 uk-push-1-5  uk-progress uk-progress-success uk-progress-striped uk-active">
+                <div id="progress" class="uk-progress-bar" style="text-align: center;width: 80%;">
+                </div>
+        </div>
+    </div>
+    
+</div>
+<script type="text/javascript">settimejump(7,'index');</script>
+</body>
+</html>
